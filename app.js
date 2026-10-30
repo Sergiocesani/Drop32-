@@ -29,12 +29,12 @@ import {
 // Pega aquí las credenciales obtenidas de tu consola de Firebase
 // ==========================================
 const firebaseConfig = {
-  apiKey: "TU_API_KEY_AQUI",
-  authDomain: "tu-proyecto.firebaseapp.com",
-  projectId: "tu-proyecto",
-  storageBucket: "tu-proyecto.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef123456"
+  apiKey: "AIzaSyCK5yxTZXiIVYwkSg9nDt3v4bkyaeyTe3w",
+  authDomain: "drop32-jnc.firebaseapp.com",
+  projectId: "drop32-jnc",
+  storageBucket: "drop32-jnc.firebasestorage.app",
+  messagingSenderId: "342269791406",
+  appId: "1:342269791406:web:03f5fa4e468b89dde9b13f"
 };
 
 // Inicialización de Firebase
