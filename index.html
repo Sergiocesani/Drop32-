@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>+32 DROP | Más estilo. Más actitud. Más vos.</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;0,900;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-plus">+32</span>
+        <span class="logo-sub">DROP</span>
+      </a>
+
+      <div class="nav-actions">
+        <button id="open-cart-btn" class="cart-trigger" aria-label="Ver carrito">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="cart-counter" class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-brand">
+        <div class="badge-tag">EXCLUSIVIDAD URBANA</div>
+        <h1 class="hero-title">+32 <span>DROP</span></h1>
+        <p class="hero-slogan">MÁS ESTILO. MÁS ACTITUD. MÁS VOS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY ICONS BAR -->
+  <nav class="categories-bar">
+    <div class="cat-track">
+      <button class="cat-pill active" data-category="todos">
+        <i class="fa-solid fa-border-all"></i>
+        <span>TODOS</span>
+      </button>
+      <button class="cat-pill" data-category="ropa">
+        <i class="fa-solid fa-shirt"></i>
+        <span>ROPA</span>
+      </button>
+      <button class="cat-pill" data-category="zapatillas">
+        <i class="fa-solid fa-shoe-prints"></i>
+        <span>ZAPATILLAS</span>
+      </button>
+      <button class="cat-pill" data-category="perfumes">
+  <i class="fa-solid fa-spray-can-sparkles"></i>
+  <span>PERFUMES</span>
+</button>
+      <button class="cat-pill" data-category="tecnologia">
+        <i class="fa-solid fa-headphones"></i>
+        <span>TECNOLOGÍA</span>
+      </button>
+      <button class="cat-pill" data-category="accesorios">
+        <i class="fa-solid fa-gem"></i>
+        <span>ACCESORIOS</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- VALUE PROPS BADGES -->
+  <section class="value-props">
+    <div class="prop-item">
+      <i class="fa-solid fa-lock"></i>
+      <div>
+        <strong>PAGOS SEGUROS</strong>
+        <span>100% Protegidos</span>
+      </div>
+    </div>
+    <div class="prop-item">
+      <i class="fa-solid fa-truck-fast"></i>
+      <div>
+        <strong>ENVÍOS A TODO EL PAÍS</strong>
+        <span>Llegamos a tu puerta</span>
+      </div>
+    </div>
+    <div class="prop-item">
+      <i class="fa-solid fa-shield-halved"></i>
+      <div>
+        <strong>PRODUCTOS SELECCIONADOS</strong>
+        <span>Curaduría exclusiva</span>
+      </div>
+    </div>
+    <div class="prop-item">
+      <i class="fa-regular fa-gem"></i>
+      <div>
+        <strong>CALIDAD PREMIUM</strong>
+        <span>Streetwear selecto</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG GRID -->
+  <main class="catalog-section">
+    <div class="section-header">
+      <h2>Catálogo de Lanzamientos</h2>
+      <p>Unidades limitadas con sincronización en tiempo real.</p>
+    </div>
+
+    <!-- Spinner de carga -->
+    <div id="catalog-loader" class="loader-container">
+      <div class="spinner"></div>
+      <p>Cargando drop exclusivo...</p>
+    </div>
+
+    <!-- Contenedor dinámico de productos -->
+    <div id="products-grid" class="products-grid"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="footer-copy">
+      <p>&copy; 2026 <strong>+32 DROP</strong>. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- SIDEBAR DEL CARRITO -->
+  <div id="cart-drawer-overlay" class="drawer-overlay"></div>
+  <aside id="cart-drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="header-left">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <h3>Tu Carrito</h3>
+      </div>
+      <button id="close-cart-btn" class="close-btn" aria-label="Cerrar">&times;</button>
+    </div>
+
+    <div id="cart-items" class="cart-items-container">
+      <!-- Items agregados dinámicamente -->
+    </div>
+
+    <div class="drawer-footer">
+      <div class="summary-line total-line">
+        <span>Total Estimado:</span>
+        <span id="cart-total-price">$0</span>
+      </div>
+      <button id="checkout-btn" class="checkout-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>FINALIZAR PEDIDO</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- NOTIFICACIÓN TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <!-- SCRIPT PRINCIPAL (ES Modules para Firebase SDK) -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
